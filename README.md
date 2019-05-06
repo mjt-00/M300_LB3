@@ -1,13 +1,13 @@
 M300 - LB3
 ===================
 
-####K1
+#### K1
 
 Zum Kapitel K1 gibt es nicht viel zu schreiben, da wir dies bereits bei der LB1
 beschrieben und dokumentiert haben. Hier geht es schliesslich nur darum die
 Programme zu installieren.
 
-####K2
+#### K2
 
 Github Accound sowie Git-Client sind bereits installiert und eingerichtet. Dass
 die Dokumentation als Markdown vorhanden ist, ist anschliessend auch
@@ -23,7 +23,7 @@ machen hat.
 Was wir aber sagen müssen bezüglich Lernschritte, dass wir vieles gelernt und
 erlernt haben. Wir wissen einiges im Gegensatz zu dem Stand davor.
 
-####K3
+#### K3
 
 Kommen wir zum wirklich spannenden Teil: K3
 
@@ -59,7 +59,7 @@ MYSQL_USER=osticket -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=osticket mysql:5
 Was damit gewollt ist, die ganzen SQL Dateien im C:\\Docker\\container\\mysql
 abzuspeichern.
 
-####K4
+#### K4
 
 Kommen wir zum Sicherheitspart:
 

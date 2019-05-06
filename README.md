@@ -37,14 +37,14 @@ Wie wir dies genau gemacht haben hier im Anschluss:
 Als erstes musste MySQL installiert werden, dazu gehört auch Passwort etc.
 mitzugeben:
 
-docker run --name osticket_mysql -d -e MYSQL_ROOT_PASSWORD=secret -e
-MYSQL_USER=osticket -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=osticket mysql:5
+    docker run --name osticket_mysql -d -e MYSQL_ROOT_PASSWORD=secret -e
+    MYSQL_USER=osticket -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=osticket mysql:5
 
 Anschliessend logischerweise noch OSTicket, welches an die Datenbank angehängt
 und verknüpft wird:
 
-docker run --name osticket -d --link osticket_mysql:mysql -p 8080:80
-campbellsoftwaresolutions/osticket
+    docker run --name osticket -d --link osticket_mysql:mysql -p 8080:80
+    campbellsoftwaresolutions/osticket
 
 Kommen wir zum sogenannten Volume. Hier geht es darum, die Volumes also die
 Pfade abzuändern, daher wollen wir beispielsweise das ganze bei uns Lokal
@@ -52,9 +52,9 @@ abspeichern. Leider hatten wir Probleme (wir haben dies auch mit Herrn Bernet
 angeschaut). Es ist weder bei Git Bash weder noch bei Powreshell gegangen. Hier
 aber dennoch den Befehl dafür:
 
-docker run --name osticket_mysql -d -e MYSQL_ROOT_PASSWORD=secret -e
-MYSQL_USER=osticket -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=osticket mysql:5
--v C:\\DOCKER\\container\\mysql:/var/lib/mysql
+    docker run --name osticket_mysql -d -e MYSQL_ROOT_PASSWORD=secret -e
+    MYSQL_USER=osticket -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=osticket mysql:5
+    -v C:\\DOCKER\\container\\mysql:/var/lib/mysql
 
 Was damit gewollt ist, die ganzen SQL Dateien im C:\\Docker\\container\\mysql
 abzuspeichern.
@@ -74,24 +74,24 @@ wir wie folgt integrieren:
 
 Speicher begrenzen:
 
-docker run -m 128m --memory-swap 128m amouat/stress stress --vm 1 --vm-bytes
-127m -t 5s
+    docker run -m 128m --memory-swap 128m amouat/stress stress --vm 1 --vm-bytes
+    127m -t 5s
 
 CPU Einsatz:
 
-docker run -d --name load1 -c 2048 amouat/stress
+    docker run -d --name load1 -c 2048 amouat/stress
 
-docker run -d --name load2 amouat/stress
+    docker run -d --name load2 amouat/stress
 
-docker run -d --name load3 -c 512 amouat/stress
+    docker run -d --name load3 -c 512 amouat/stress
 
-docker run -d --name load4 -c 512 amouat/stress
+    docker run -d --name load4 -c 512 amouat/stress
 
-docker stats \$(docker inspect -f {{.Name}} \$(docker ps -q))
+    docker stats \$(docker inspect -f {{.Name}} \$(docker ps -q))
 
 Neustarts begrenzen:
 
-docker run -d --restart=on-failure:10 my-flaky-image
+    docker run -d --restart=on-failure:10 my-flaky-image
 
 ####Reflexion
 

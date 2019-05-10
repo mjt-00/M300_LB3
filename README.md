@@ -92,6 +92,17 @@ CPU Einsatz:
 Neustarts begrenzen:
 
     docker run -d --restart=on-failure:10 my-flaky-image
+    
+**Docker spezifischen Befehle**
+
+| Befehl         | Beschreibung                                    |
+| -------------- | ----------------------------------------------- |
+| `docker run`   | Führt einen Befehl in einem neuen Container aus |
+| `docker start` | Startet einen oder mehrere Container            |
+| `docker stop`  | Stoppt einen oder mehrere Container             |
+| `docker build` | Baut eine Image aus dem Dockerfile              |
+| `docker pull`  | Lädt Image aus einer Repository herunter        |
+| `docker push`  | Lädt Image in eine Repository hoch              |   
 
 #### Reflexion
 

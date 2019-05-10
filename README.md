@@ -104,6 +104,9 @@ Neustarts begrenzen:
 | `docker pull`  | Lädt Image aus einer Repository herunter        |
 | `docker push`  | Lädt Image in eine Repository hoch              |   
 
+#### K6
+Die Sachen zur Kategorie K6 ist in Sayfallah Ltaiefs Dokumentation auf Github heraufgeladen. Da es erst nach dem Mittwoch noch vollendet wurde und wir es via Teamviewer zusammen bearbeitet haben, haben wir es lediglich einmalig dokumentiert/abgelegt.
+
 #### Reflexion
 
 Kommen wir zum Schluss noch zur Reflexion.  
